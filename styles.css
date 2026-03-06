@@ -783,7 +783,7 @@ address {
     align-items: center;
   }
 
-  .btn {
+  .hero-actions .btn {
     width: 100%;
     max-width: 300px;
   }
