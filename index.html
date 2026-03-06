@@ -337,8 +337,7 @@
   </footer>
 
   <script>
-    var REGISTRATION_SCRIPT_URL = "REPLACE_WITH_YOUR_REGISTRATION_SCRIPT_URL";
-    var SPONSORSHIP_SCRIPT_URL = "REPLACE_WITH_YOUR_SPONSORSHIP_SCRIPT_URL";
+    var SCRIPT_URL = "REPLACE_WITH_YOUR_SCRIPT_URL";
 
     var SPONSOR_LEVELS = {
       "5000": "Exclusive Name Sponsor",
@@ -364,6 +363,7 @@
 
       var formData = new FormData(form);
       var data = {
+        type: "registration",
         captainName: formData.get("captainName"),
         captainPhone: formData.get("captainPhone"),
         captainEmail: formData.get("captainEmail"),
@@ -376,7 +376,7 @@
       button.disabled = true;
       button.textContent = "Submitting...";
 
-      submitToSheet(REGISTRATION_SCRIPT_URL, data)
+      submitToSheet(SCRIPT_URL, data)
         .then(function () { showRegistrationConfirmation(data); })
         .catch(function () { showRegistrationConfirmation(data); });
     }
@@ -394,6 +394,7 @@
 
       var formData = new FormData(form);
       var data = {
+        type: "sponsorship",
         businessName: formData.get("businessName"),
         contactPerson: formData.get("contactPerson") || "",
         sponsorEmail: formData.get("sponsorEmail"),
@@ -406,7 +407,7 @@
       button.disabled = true;
       button.textContent = "Submitting...";
 
-      submitToSheet(SPONSORSHIP_SCRIPT_URL, data)
+      submitToSheet(SCRIPT_URL, data)
         .then(function () { showSponsorshipConfirmation(data); })
         .catch(function () { showSponsorshipConfirmation(data); });
     }
