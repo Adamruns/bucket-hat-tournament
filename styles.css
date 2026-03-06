@@ -404,6 +404,196 @@ address {
   opacity: 0.7;
 }
 
+/* Forms */
+
+.form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.site-form fieldset {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.site-form legend {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.form-field {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-gray-700);
+  margin-bottom: 0.375rem;
+}
+
+.form-label abbr {
+  color: var(--color-green);
+  text-decoration: none;
+}
+
+.form-field input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-gray-800);
+  background: var(--color-white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 3px rgba(91, 155, 213, 0.15);
+}
+
+.site-form.was-validated .form-field input:invalid {
+  border-color: #dc3545;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.radio-option:hover {
+  border-color: var(--color-blue-light);
+  background: rgba(91, 155, 213, 0.04);
+}
+
+.radio-option:has(input:checked) {
+  border-color: var(--color-green);
+  background: rgba(45, 138, 78, 0.05);
+}
+
+.radio-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: var(--color-green);
+}
+
+.radio-label {
+  font-size: 0.95rem;
+  color: var(--color-gray-700);
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Confirmation */
+
+.confirmation {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.confirmation-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.confirmation h3 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.75rem;
+}
+
+.confirmation > p {
+  color: var(--color-gray-600);
+  margin-bottom: 2rem;
+}
+
+.confirmation-details {
+  text-align: left;
+  background: var(--color-gray-50);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.confirmation-details dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1.5rem;
+}
+
+.confirmation-details dt {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-gray-600);
+}
+
+.confirmation-details dd {
+  font-size: 0.875rem;
+  color: var(--color-gray-800);
+  font-weight: 600;
+}
+
+.confirmation-payment {
+  margin-top: 2rem;
+}
+
+.confirmation-payment-heading {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.payment-grid--compact {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.payment-grid--compact .payment-option h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.75rem;
+}
+
 /* Auction */
 
 .auction-content {
@@ -558,6 +748,10 @@ address {
 
   .hero-logo {
     width: 150px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
   }
 
   .hero-details {
