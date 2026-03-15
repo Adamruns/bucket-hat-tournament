@@ -422,10 +422,46 @@ address {
   padding: 2rem 3rem;
   text-align: center;
   transition: box-shadow 0.2s;
+  flex: 1 1 280px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .showcase-sponsor:hover {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.showcase-sponsor--featured {
+  position: relative;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 1px var(--color-gold), 0 4px 20px rgba(201, 168, 76, 0.15);
+}
+
+.showcase-sponsor-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-gold);
+  color: var(--color-navy-deep);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.showcase-sponsor-logo {
+  height: 60px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 
 .showcase-sponsor-name {
