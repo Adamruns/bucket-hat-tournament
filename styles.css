@@ -404,6 +404,32 @@ address {
   opacity: 0.7;
 }
 
+/* Masters Week Special Pricing */
+
+.masters-week-price .original-price {
+  text-decoration: line-through;
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+.masters-week-price strong {
+  color: var(--color-green);
+  font-size: 1.1em;
+}
+
+.masters-week-badge {
+  display: inline-block;
+  background: var(--color-green);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  margin-top: 0.5rem;
+}
+
 /* Sponsors showcase */
 
 .sponsors-showcase {
