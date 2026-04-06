@@ -232,6 +232,25 @@ address {
   font-size: 0.875rem;
 }
 
+/* Promo Banner */
+
+.promo-banner {
+  background: #8dbc5d;
+}
+
+.promo-banner-link {
+  display: block;
+  transition: opacity 0.2s;
+}
+
+.promo-banner-link:hover {
+  opacity: 0.95;
+}
+
+.promo-banner-image {
+  width: 100%;
+}
+
 /* Sections */
 
 .section {
