@@ -404,7 +404,76 @@ address {
   opacity: 0.7;
 }
 
-/* Masters Week Special Pricing */
+/* Masters Week Promo Banner */
+
+.masters-promo {
+  position: relative;
+  background: var(--color-navy-deep);
+  overflow: hidden;
+}
+
+.masters-promo-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 340px;
+}
+
+.masters-promo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.masters-promo-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  gap: 1rem;
+}
+
+.masters-promo-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.masters-promo-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.1;
+}
+
+.masters-promo-title em {
+  font-style: normal;
+  color: var(--color-gold);
+}
+
+.masters-promo-text {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.masters-promo-text strong {
+  color: var(--color-white);
+  font-size: 1.15em;
+}
+
+.masters-promo-text .original-price {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.masters-promo-content .btn-primary {
+  align-self: flex-start;
+}
+
+/* Masters Week Special Pricing (detail card) */
 
 .masters-week-price .original-price {
   text-decoration: line-through;
@@ -835,6 +904,24 @@ address {
 
   .nav-link {
     font-size: 0.75rem;
+  }
+
+  .masters-promo-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .masters-promo-img {
+    height: 200px;
+  }
+
+  .masters-promo-content {
+    padding: 2rem 1.25rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .masters-promo-content .btn-primary {
+    align-self: center;
   }
 
   .details-grid {
